@@ -5,21 +5,21 @@
 class NomadEventsSink < Formula
   desc ""
   homepage ""
-  version "0.2.0"
+  version "0.2.1"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/attachmentgenie/nomad-events-sink/releases/download/v0.2.0/nomad-events-sink_0.2.0_darwin_arm64.zip"
-      sha256 "7694bb5a30dea9561f558213baa754756d2a79ed1796f6aed9631acbe9ad1bca"
+      url "https://github.com/attachmentgenie/nomad-events-sink/releases/download/v0.2.1/nomad-events-sink_0.2.1_darwin_arm64.zip"
+      sha256 "4f4676fc3da1c3097daf8d4b9c4702ee9df1b9d127a5a5a7afe25b9d4d022581"
 
       def install
         bin.install "nomad-events-sink"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/attachmentgenie/nomad-events-sink/releases/download/v0.2.0/nomad-events-sink_0.2.0_darwin_amd64.zip"
-      sha256 "76583bcc74d46d8cc0c5218783a4fd4a05fd62e68dcac4517f59f3539f6453b8"
+      url "https://github.com/attachmentgenie/nomad-events-sink/releases/download/v0.2.1/nomad-events-sink_0.2.1_darwin_amd64.zip"
+      sha256 "899a4bb17fb74b26905d4a6efd9795e6bd078aa2003c07bdfb65d56496f25bac"
 
       def install
         bin.install "nomad-events-sink"
