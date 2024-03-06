@@ -4,7 +4,7 @@
 
 `brew install attachmentgenie/tap/<formula>`
 
-Or `brew tap attachmentgenie/tap` and then `brew install <formula>`.
+Or `brew tap attachmentgenie/tap` and then `brew install attachmentgenie/tap/<formula>`.
 
 ## Documentation
 
