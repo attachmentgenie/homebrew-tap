@@ -5,20 +5,20 @@
 class Example < Formula
   desc ""
   homepage ""
-  version "0.3.1"
+  version "0.4.0"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/attachmentgenie/golang-example/releases/download/v0.3.1/example_0.3.1_darwin_arm64.zip"
-    sha256 "625359ce1015234b40ebb59d6d37fcbbd1a56f44ea75d9c7d6629f695b196bca"
+    url "https://github.com/attachmentgenie/golang-example/releases/download/v0.4.0/example_0.4.0_darwin_arm64.zip"
+    sha256 "6d5a0f77bff357cd8fe0b8a8d7dd8e3f4172118ddd6031aac503f661390e37e0"
 
     def install
       bin.install "example"
     end
   end
   if Hardware::CPU.intel?
-    url "https://github.com/attachmentgenie/golang-example/releases/download/v0.3.1/example_0.3.1_darwin_amd64.zip"
-    sha256 "15593100b9b873068f5129d6c47f68bbc4f8ef899ccea667437b4c6e31ebc387"
+    url "https://github.com/attachmentgenie/golang-example/releases/download/v0.4.0/example_0.4.0_darwin_amd64.zip"
+    sha256 "1615f620ac6919b6c4d1583bf85ef87d2580730c96cd09adcd0d0c095ed3b2c0"
 
     def install
       bin.install "example"
