@@ -5,20 +5,20 @@
 class Atc < Formula
   desc ""
   homepage ""
-  version "0.0.3"
+  version "0.0.4"
   depends_on :macos
 
-  on_intel do
-    url "https://github.com/attachmentgenie/atc/releases/download/v0.0.3/atc_0.0.3_darwin_amd64.zip"
-    sha256 "8354d1a81daed98fffed6c0c228e02190a27e3ab5be33782d9eeabc1b51b6e65"
+  if Hardware::CPU.intel?
+    url "https://github.com/attachmentgenie/atc/releases/download/v0.0.4/atc_0.0.4_darwin_amd64.zip"
+    sha256 "60425e593a5b6acce42d1126101a8bbd58a12eb499e70855cf20e309c86c2ace"
 
     def install
       bin.install "atc"
     end
   end
-  on_arm do
-    url "https://github.com/attachmentgenie/atc/releases/download/v0.0.3/atc_0.0.3_darwin_arm64.zip"
-    sha256 "ec86e044285014c014590fddf68a8c783da4c9159bfda2b4c0fd2fa40ebf89b7"
+  if Hardware::CPU.arm?
+    url "https://github.com/attachmentgenie/atc/releases/download/v0.0.4/atc_0.0.4_darwin_arm64.zip"
+    sha256 "6249c4222612a561f1704b3a22362899f9d9b12bc37b7d70a3cf634dcfb2021e"
 
     def install
       bin.install "atc"
