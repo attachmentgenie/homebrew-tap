@@ -5,20 +5,20 @@
 class PuppetDynamodbOtp < Formula
   desc ""
   homepage ""
-  version "0.1.3"
+  version "0.1.4"
   depends_on :macos
 
-  on_intel do
-    url "https://github.com/attachmentgenie/puppet-dynamodb-otp/releases/download/v0.1.3/puppet-dynamodb-otp_0.1.3_darwin_amd64.zip"
-    sha256 "4180f2f606796bfc869dd4e0a1341300e9b104d8bb1f9b15b4bd82b054526d67"
+  if Hardware::CPU.intel?
+    url "https://github.com/attachmentgenie/puppet-dynamodb-otp/releases/download/v0.1.4/puppet-dynamodb-otp_0.1.4_darwin_amd64.zip"
+    sha256 "8f31234300eb60c967026b74a6c8edd390e00815e885b74e6f79a7f1bc940a15"
 
     def install
       bin.install "puppet-dynamodb-otp"
     end
   end
-  on_arm do
-    url "https://github.com/attachmentgenie/puppet-dynamodb-otp/releases/download/v0.1.3/puppet-dynamodb-otp_0.1.3_darwin_arm64.zip"
-    sha256 "9bdc51fd04b35d5359872e3cb3dae58ac5781fb180e98f156d39525ba5e7ee84"
+  if Hardware::CPU.arm?
+    url "https://github.com/attachmentgenie/puppet-dynamodb-otp/releases/download/v0.1.4/puppet-dynamodb-otp_0.1.4_darwin_arm64.zip"
+    sha256 "c20e7cd08a6c4f53a04d77d8b2cdf4a14a040a37cd1cf84c2bd3a857365744f6"
 
     def install
       bin.install "puppet-dynamodb-otp"
