@@ -5,20 +5,20 @@
 class NomadLogger < Formula
   desc ""
   homepage ""
-  version "0.5.0"
+  version "0.4.1"
   depends_on :macos
 
-  on_intel do
-    url "https://github.com/attachmentgenie/nomad-logger/releases/download/v0.5.0/nomad-logger_0.5.0_darwin_amd64.zip"
-    sha256 "5bda73bd437b6cf3ec213efb993ed1a313ab91d263a37905828c039d21b3a447"
+  if Hardware::CPU.intel?
+    url "https://github.com/attachmentgenie/nomad-logger/releases/download/v0.4.1/nomad-logger_0.4.1_darwin_amd64.zip"
+    sha256 "8a3f7de4e545cb18df154cf2e4d2a4c8f087d2ec85d1faf6dc6821c8de24a412"
 
     def install
       bin.install "nomad-logger"
     end
   end
-  on_arm do
-    url "https://github.com/attachmentgenie/nomad-logger/releases/download/v0.5.0/nomad-logger_0.5.0_darwin_arm64.zip"
-    sha256 "88d3d93f2c0e0a8219f53394312a2ff873866216574c6302891216eb751f7acd"
+  if Hardware::CPU.arm?
+    url "https://github.com/attachmentgenie/nomad-logger/releases/download/v0.4.1/nomad-logger_0.4.1_darwin_arm64.zip"
+    sha256 "108c7802c0a3e3cc4b73759ceb83e642b53b47665e8beb1bec4c6a34497f58eb"
 
     def install
       bin.install "nomad-logger"
